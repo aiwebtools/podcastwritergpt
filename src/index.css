@@ -1,92 +1,39 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 230 35% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 230 25% 10%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 230 25% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 189 100% 68%;
+    --primary-foreground: 230 35% 7%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 270 100% 50%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 230 20% 20%;
+    --muted-foreground: 210 20% 80%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 315 100% 58%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 230 20% 25%;
+    --input: 230 20% 25%;
+    --ring: 189 100% 68%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -94,8 +41,139 @@
   * {
     @apply border-border;
   }
+  
+  html {
+    @apply scroll-smooth;
+  }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-cyber-bg-dark text-cyber-text-primary antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
+  
+  ::selection {
+    @apply bg-cyber-neon-blue/30 text-white;
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply relative bg-cyber-bg-darker/80 backdrop-blur-md border border-cyber-neon-blue/20 rounded-lg overflow-hidden p-6;
+  }
+  
+  .cyber-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-cyber-neon-blue/10 to-cyber-neon-purple/5 opacity-30;
+    z-index: -1;
+  }
+  
+  .cyber-border {
+    @apply border border-cyber-neon-blue/30 rounded-md shadow-sm;
+  }
+  
+  .neon-text {
+    @apply text-cyber-neon-blue;
+    text-shadow: 0 0 5px theme('colors.cyber.neon-blue'), 0 0 10px theme('colors.cyber.neon-blue');
+  }
+  
+  .neon-button {
+    @apply relative overflow-hidden bg-cyber-bg-darker px-5 py-2.5 rounded-md border border-cyber-neon-blue text-cyber-neon-blue font-medium transition-all duration-300;
+    box-shadow: 0 0 5px theme('colors.cyber.neon-blue'), inset 0 0 5px theme('colors.cyber.neon-blue');
+  }
+  
+  .neon-button:hover {
+    @apply border-cyber-neon-blue/80 bg-cyber-neon-blue/10;
+    box-shadow: 0 0 15px theme('colors.cyber.neon-blue'), inset 0 0 10px theme('colors.cyber.neon-blue');
+  }
+  
+  .neon-button:active {
+    @apply scale-95;
+  }
+  
+  .cyber-glass {
+    @apply bg-black/30 backdrop-blur-lg border border-white/10 rounded-lg;
+  }
+  
+  .cyber-grid-bg {
+    background-image: linear-gradient(rgba(88, 230, 255, 0.1) 1px, transparent 1px), 
+                      linear-gradient(to right, rgba(88, 230, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-neon-gradient animate-text-shimmer;
+    background-size: 200% auto;
+  }
+  
+  .glow-dot {
+    @apply absolute w-1 h-1 rounded-full bg-cyber-neon-blue;
+    box-shadow: 0 0 15px 5px theme('colors.cyber.neon-blue');
+  }
+  
+  .main-cta {
+    @apply relative overflow-hidden bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-purple text-white font-medium px-6 py-3 rounded-md transition-all duration-300;
+    box-shadow: 0 0 15px theme('colors.cyber.neon-blue');
+  }
+  
+  .main-cta:hover {
+    @apply transform scale-105;
+    box-shadow: 0 0 25px theme('colors.cyber.neon-purple');
+  }
+  
+  .main-cta:active {
+    @apply transform scale-95;
+  }
+  
+  .secondary-cta {
+    @apply relative overflow-hidden bg-transparent border border-cyber-neon-pink text-cyber-neon-pink font-medium px-6 py-3 rounded-md transition-all duration-300;
+  }
+  
+  .secondary-cta:hover {
+    @apply bg-cyber-neon-pink/10;
+    box-shadow: 0 0 15px theme('colors.cyber.neon-pink');
+  }
+  
+  .secondary-cta:active {
+    @apply transform scale-95;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B14;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cyber-neon-blue/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cyber-neon-blue/70;
+}
+
+/* Animation delays for staggered animations */
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Prevent animations on page load */
+.preload * {
+  animation-duration: 0s !important;
+  transition: none !important;
 }
