@@ -91,7 +91,7 @@ const Header: React.FC = () => {
               <a
                 key={index}
                 href={link.url}
-                className="text-lg text-cyber-text-secondary hover:text-cyber-neon-blue transition-colors duration-200"
+                className="text-lg bg-cyber-bg-darker px-4 py-2 rounded-md border border-cyber-neon-blue/30 text-white hover:text-cyber-neon-blue hover:border-cyber-neon-blue/60 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
                 target={link.url.startsWith('http') ? '_blank' : undefined}
                 rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
