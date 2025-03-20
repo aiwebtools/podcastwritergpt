@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Mic, Menu, X, Book, Film } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -51,9 +52,9 @@ const Header: React.FC = () => {
         scrolled ? 'bg-cyber-bg-darker/90 backdrop-blur-lg shadow-neon' : 'bg-transparent'
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between relative">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 group">
+        <a href="/" className="flex items-center gap-2 group z-20">
           <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-cyber-bg-darker border border-cyber-neon-blue/30 group-hover:border-cyber-neon-blue/60 transition-all duration-300">
             <Mic className="w-5 h-5 text-cyber-neon-blue" />
             <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ boxShadow: '0 0 15px theme("colors.cyber.neon-blue")' }}></div>
@@ -104,7 +105,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="lg:hidden p-2 text-white hover:text-cyber-neon-blue transition-colors focus:outline-none" 
+          className="lg:hidden p-2 text-white hover:text-cyber-neon-blue transition-colors focus:outline-none z-20" 
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
@@ -122,7 +123,7 @@ const Header: React.FC = () => {
             mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           )}
         >
-          <nav className="flex flex-col items-center justify-center h-full gap-6 py-8">
+          <nav className="flex flex-col items-center justify-center pt-8 pb-16 h-full gap-6 overflow-y-auto">
             {/* Mobile Tool Buttons */}
             {toolLinks.map((tool, index) => (
               <a
@@ -138,7 +139,7 @@ const Header: React.FC = () => {
                   className="w-full border-cyber-neon-blue/30 hover:border-cyber-neon-blue/80 hover:bg-cyber-neon-blue/10 text-cyber-neon-blue bg-cyber-bg-darker"
                 >
                   {tool.icon}
-                  <span>{tool.label}</span>
+                  <span className="ml-2">{tool.label}</span>
                 </Button>
               </a>
             ))}
@@ -148,7 +149,7 @@ const Header: React.FC = () => {
               <a
                 key={`link-${index}`}
                 href={link.url}
-                className="text-lg bg-cyber-bg-darker px-4 py-2 rounded-md border border-cyber-neon-blue/30 text-white hover:text-cyber-neon-blue hover:border-cyber-neon-blue/60 transition-colors duration-200"
+                className="w-4/5 max-w-xs text-center text-lg bg-cyber-bg-darker px-4 py-2 rounded-md border border-cyber-neon-blue/30 text-white hover:text-cyber-neon-blue hover:border-cyber-neon-blue/60 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
                 target={link.url.startsWith('http') ? '_blank' : undefined}
                 rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
