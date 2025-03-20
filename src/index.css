@@ -177,3 +177,19 @@
   animation-duration: 0s !important;
   transition: none !important;
 }
+
+/* Pulse animation for golden glow */
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px #F97316, 0 0 15px #F97316, 0 0 20px #FEF7CD;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 15px #F97316, 0 0 25px #F97316, 0 0 30px #FEF7CD;
+  }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px #F97316, 0 0 15px #F97316, 0 0 20px #FEF7CD;
+  }
+}

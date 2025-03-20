@@ -60,7 +60,11 @@ const Hero: React.FC = () => {
       {/* Hero content */}
       <div className="max-w-5xl mx-auto text-center relative z-10 animate-fade-in">
         <div className="inline-block mb-8 cyber-card px-4 py-2 border-cyber-neon-blue/30 animate-float">
-          <p className="text-cyber-neon-blue text-sm md:text-base flex items-center gap-2">
+          <p className="text-[#FEF7CD] text-sm md:text-base flex items-center gap-2 font-semibold"
+             style={{ 
+               textShadow: '0 0 10px #F97316, 0 0 15px #F97316, 0 0 20px #FEF7CD',
+               animation: 'pulse 2s infinite'
+             }}>
             <Headphones className="w-4 h-4" />
             <span>Elevate Your Podcast Game with AI</span>
           </p>
