@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-import { Mic, Menu, X } from 'lucide-react';
+import { Mic, Menu, X, Book, Film } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,12 +17,27 @@ const Header: React.FC = () => {
   }, []);
 
   const headerLinks = [
-    { label: 'Podcast Script Writer GPT', url: 'https://chatgpt.com/g/g-67db5475a0708191b865c55abc138611-podcast-script-writer-gpt' },
-    { label: 'Try Book Writer GPT', url: 'https://bookwritergpt.lovable.app/?via=aiwebtools' },
-    { label: 'Try Movie Script Writer GPT', url: 'https://moviescriptwritergpt.lovable.app/?via=aiwebtools' },
     { label: 'FAQ', url: '#faq' },
     { label: 'Disclaimer', url: '#disclaimer' },
     { label: 'More AI Tools', url: 'https://www.aiwebtools.ai' },
+  ];
+
+  const toolLinks = [
+    { 
+      label: 'Use Podcast Script Writer GPT', 
+      url: 'https://chatgpt.com/g/g-67db5475a0708191b865c55abc138611-podcast-script-writer-gpt',
+      icon: <Mic className="w-4 h-4" />
+    },
+    { 
+      label: 'Try Book Writer GPT', 
+      url: 'https://bookwritergpt.lovable.app/?via=aiwebtools',
+      icon: <Book className="w-4 h-4" />
+    },
+    { 
+      label: 'Try Movie Script Writer GPT', 
+      url: 'https://moviescriptwritergpt.lovable.app/?via=aiwebtools',
+      icon: <Film className="w-4 h-4" />
+    },
   ];
 
   const toggleMobileMenu = () => {
@@ -52,7 +67,28 @@ const Header: React.FC = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-3">
+          {/* Tool Buttons */}
+          <div className="flex items-center gap-2 mr-4">
+            {toolLinks.map((tool, index) => (
+              <a 
+                key={index}
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button 
+                  variant="outline" 
+                  className="border-cyber-neon-blue/30 hover:border-cyber-neon-blue/80 hover:bg-cyber-neon-blue/10 text-cyber-neon-blue"
+                >
+                  {tool.icon}
+                  <span>{tool.label}</span>
+                </Button>
+              </a>
+            ))}
+          </div>
+
+          {/* Other Navigation Links */}
           {headerLinks.map((link, index) => (
             <a 
               key={index} 
@@ -86,10 +122,31 @@ const Header: React.FC = () => {
             mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           )}
         >
-          <nav className="flex flex-col items-center justify-center h-full gap-8 py-8">
+          <nav className="flex flex-col items-center justify-center h-full gap-6 py-8">
+            {/* Mobile Tool Buttons */}
+            {toolLinks.map((tool, index) => (
+              <a
+                key={`tool-${index}`}
+                href={tool.url}
+                className="w-4/5 max-w-xs"
+                onClick={() => setMobileMenuOpen(false)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button 
+                  variant="outline" 
+                  className="w-full border-cyber-neon-blue/30 hover:border-cyber-neon-blue/80 hover:bg-cyber-neon-blue/10 text-cyber-neon-blue bg-cyber-bg-darker"
+                >
+                  {tool.icon}
+                  <span>{tool.label}</span>
+                </Button>
+              </a>
+            ))}
+
+            {/* Mobile Other Links */}
             {headerLinks.map((link, index) => (
               <a
-                key={index}
+                key={`link-${index}`}
                 href={link.url}
                 className="text-lg bg-cyber-bg-darker px-4 py-2 rounded-md border border-cyber-neon-blue/30 text-white hover:text-cyber-neon-blue hover:border-cyber-neon-blue/60 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
