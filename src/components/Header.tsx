@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { Mic, Menu, X, Book, Film } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,9 +69,9 @@ const Header: React.FC = () => {
           </div>
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - now showing all buttons directly */}
         <nav className="hidden lg:flex items-center gap-3">
-          {/* Tool Buttons */}
+          {/* Tool Buttons directly visible */}
           <div className="flex items-center gap-2 mr-4">
             {toolLinks.map((tool, index) => (
               <a 
@@ -77,13 +79,14 @@ const Header: React.FC = () => {
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="inline-block"
               >
                 <Button 
                   variant="outline" 
                   className="border-cyber-neon-blue/30 hover:border-cyber-neon-blue/80 hover:bg-cyber-neon-blue/10 text-cyber-neon-blue"
                 >
                   {tool.icon}
-                  <span>{tool.label}</span>
+                  <span className="ml-2">{tool.label}</span>
                 </Button>
               </a>
             ))}
@@ -103,7 +106,7 @@ const Header: React.FC = () => {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - only shown on mobile */}
         <button 
           className="lg:hidden p-2 text-white hover:text-cyber-neon-blue transition-colors focus:outline-none z-20" 
           onClick={toggleMobileMenu}
