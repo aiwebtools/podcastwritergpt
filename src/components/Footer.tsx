@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
               Privacy Policy
             </a>
             <a 
-              href="https://aiwebtools.ai/terms-of-services" 
+              href="https://aiwebtools.lovable.app/disclaimers" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-sm text-cyber-text-secondary hover:text-cyber-neon-blue transition-colors"
