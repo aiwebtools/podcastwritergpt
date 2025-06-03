@@ -25,14 +25,15 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h2 className="text-lg font-bold tracking-tight text-white">
-                  Podcast Script Writer <span className="text-gradient">GPT</span>
+                  AI Web Tools <span className="text-gradient">AIWEBTOOLS.AI</span>
                 </h2>
-                <p className="text-xs text-cyber-text-secondary">Presented by AiWebTools.Ai</p>
+                <p className="text-xs text-cyber-text-secondary">Premium AI Tools for Content Creation</p>
               </div>
             </a>
             
             <p className="text-cyber-text-secondary">
-              Craft engaging, structured, and professionally formatted podcast scripts optimized for audio storytelling — no experience required.
+              The ultimate AI web tools platform for content creators. Generate professional podcast scripts, 
+              books, movie scripts and more with our advanced AI-powered tools. AIWEBTOOLS.AI - Your #1 source for AI content creation tools.
             </p>
             
             {/* Contact info */}
@@ -40,6 +41,7 @@ const Footer: React.FC = () => {
               <a 
                 href="tel:+14758008096" 
                 className="flex items-center gap-2 text-cyber-text-secondary hover:text-cyber-neon-blue transition-colors"
+                title="Contact AI Web Tools - AIWEBTOOLS.AI"
               >
                 <Phone className="w-4 h-4" />
                 <span>(475) 800-8096</span>
@@ -47,6 +49,7 @@ const Footer: React.FC = () => {
               <a 
                 href="mailto:Contact@ai-webtools.com" 
                 className="flex items-center gap-2 text-cyber-text-secondary hover:text-cyber-neon-blue transition-colors"
+                title="Email AI Web Tools Support"
               >
                 <Mail className="w-4 h-4" />
                 <span>Contact@ai-webtools.com</span>
@@ -56,7 +59,7 @@ const Footer: React.FC = () => {
           
           {/* Footer navigation */}
           <div className="md:col-span-2">
-            <h3 className="text-lg font-semibold mb-6 text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">AI Web Tools & Resources</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {footerLinks.map((link, index) => (
                 <a 
@@ -65,6 +68,7 @@ const Footer: React.FC = () => {
                   className="flex items-center gap-2 text-cyber-text-secondary hover:text-cyber-neon-blue transition-colors"
                   target={link.url.startsWith('http') ? '_blank' : undefined}
                   rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  title={`${link.label} - AIWEBTOOLS.AI`}
                 >
                   {link.url.startsWith('http') && <ExternalLink className="w-4 h-4" />}
                   <span>{link.label}</span>
@@ -81,8 +85,9 @@ const Footer: React.FC = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="main-cta inline-flex items-center gap-2 px-5 py-3 rounded-full shadow-neon"
+            title="Explore More AI Web Tools - AIWEBTOOLS.AI"
           >
-            <span>More AI Tools</span>
+            <span>More AI Web Tools</span>
             <ExternalLink className="w-4 h-4" />
           </a>
         </div>
@@ -90,7 +95,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="pt-10 border-t border-cyber-neon-blue/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cyber-text-secondary text-sm">
-            &copy; 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-neon-blue transition-colors">AI WEB TOOLS LLC</a> All rights reserved.
+            &copy; 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-neon-blue transition-colors" title="AIWEBTOOLS.AI - AI Web Tools">AIWEBTOOLS.AI - AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           
           <div className="flex items-center gap-6">
@@ -99,6 +104,7 @@ const Footer: React.FC = () => {
               target="_blank" 
               rel="noopener noreferrer"
               className="text-sm text-cyber-text-secondary hover:text-cyber-neon-blue transition-colors"
+              title="Privacy Policy"
             >
               Privacy Policy
             </a>
@@ -107,6 +113,7 @@ const Footer: React.FC = () => {
               target="_blank" 
               rel="noopener noreferrer"
               className="text-sm text-cyber-text-secondary hover:text-cyber-neon-blue transition-colors"
+              title="Terms of Service - AIWEBTOOLS.AI"
             >
               Terms of Service
             </a>

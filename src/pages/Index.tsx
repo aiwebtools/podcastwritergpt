@@ -11,8 +11,14 @@ import ConsentPopup from '@/components/ConsentPopup';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    // Update the document title
-    document.title = "Podcast Script Writer GPT - AI Podcast Script Generator";
+    // Update the document title with SEO optimized title
+    document.title = "AI Web Tools - #1 AI Tools for Content Creation | AIWEBTOOLS.AI";
+    
+    // Add SEO meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover the best AI web tools for content creation. Generate podcast scripts, books, movie scripts & more with our AI-powered tools. Free AI tools by AIWEBTOOLS.AI');
+    }
     
     // Prevent animations on page load
     document.body.classList.add('preload');
@@ -29,12 +35,15 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-cyber-bg-dark text-white">
+      {/* SEO optimized page structure with proper heading hierarchy */}
       <Header />
-      <Hero />
-      <HowItWorks />
-      <Testimonials />
-      <FAQ />
-      <Disclaimer />
+      <main role="main">
+        <Hero />
+        <HowItWorks />
+        <Testimonials />
+        <FAQ />
+        <Disclaimer />
+      </main>
       <Footer />
       <ConsentPopup />
     </div>

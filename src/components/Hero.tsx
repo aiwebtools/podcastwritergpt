@@ -70,15 +70,17 @@ const Hero: React.FC = () => {
           </p>
         </div>
         
+        {/* SEO optimized heading structure */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tighter">
-          <span className="block">Create Professional</span>
-          <span className="text-gradient">Podcast Scripts</span>
-          <span className="block">in Minutes</span>
+          <span className="block">AI Web Tools for</span>
+          <span className="text-gradient">Professional Content</span>
+          <span className="block">Creation</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-cyber-text-secondary max-w-3xl mx-auto mb-10">
-          Craft engaging, structured, and professionally formatted podcast scripts optimized for audio storytelling — no experience required.
-        </p>
+        <h2 className="text-lg md:text-xl text-cyber-text-secondary max-w-3xl mx-auto mb-10">
+          Create professional podcast scripts, books, and movie scripts with the best AI tools. 
+          AIWEBTOOLS.AI - Your ultimate AI content creation platform for writers, podcasters, and creators.
+        </h2>
         
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-16">
           <a 
@@ -86,28 +88,31 @@ const Hero: React.FC = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="main-cta w-full md:w-auto text-center"
+            title="Best AI Podcast Script Writer Tool - AIWEBTOOLS.AI"
           >
-            Try Podcast Script Writer GPT
+            Try AI Podcast Script Writer
           </a>
           
           <a 
             href="#how-it-works" 
             className="secondary-cta w-full md:w-auto text-center flex items-center justify-center gap-2"
+            title="Learn How AI Web Tools Work"
           >
-            <span>How It Works</span>
+            <span>How AI Tools Work</span>
             <ChevronDown className="w-4 h-4" />
           </a>
         </div>
       </div>
       
-      {/* Featured image */}
+      {/* Featured image with SEO alt text */}
       <div className="relative w-full max-w-4xl mx-auto mt-4 mb-10 p-4 opacity-90 animate-slide-up">
         <div className="aspect-video relative rounded-lg overflow-hidden cyber-border">
           <a href={images.ideogramImage} target="_blank" rel="noopener noreferrer">
             <img 
               src={images.ideogramImage} 
-              alt="Podcast Script Writer GPT in action" 
+              alt="AI Web Tools - Podcast Script Writer GPT in action - Best AI content creation tools by AIWEBTOOLS.AI" 
               className="w-full h-full object-cover object-center rounded-lg transition-transform duration-500 hover:scale-105"
+              loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-cyber-bg-darker to-transparent opacity-50"></div>
           </a>
@@ -117,7 +122,7 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-bold">
           <div className="flex items-center justify-center gap-2 p-4 bg-cyber-bg-darker/80 backdrop-blur-sm rounded-lg border border-cyber-neon-blue/30">
             <Mic className="w-6 h-6 text-cyber-neon-blue" />
-            <span>Podcast Script Writer GPT</span>
+            <span>AI Web Tools - AIWEBTOOLS.AI</span>
           </div>
         </div>
         
