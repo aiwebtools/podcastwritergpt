@@ -122,7 +122,7 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         <div
           className={cn(
-            'fixed inset-0 top-16 z-40 bg-cyber-bg-darker/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out lg:hidden',
+            'fixed inset-0 top-0 z-10 bg-cyber-bg-darker/98 backdrop-blur-lg transform transition-transform duration-200 ease-out lg:hidden pt-20',
             mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           )}
         >
