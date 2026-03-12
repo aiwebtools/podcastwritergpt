@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     { label: 'Try Movie Script Writer GPT', url: 'https://moviescriptwritergpt.lovable.app/?via=aiwebtools' },
     { label: 'FAQ', url: '#faq' },
     { label: 'Disclaimer', url: '#disclaimer' },
-    { label: 'More AI Tools', url: 'https://www.aiwebtools.ai' },
+    { label: 'More AI Tools', url: 'https://aiwebtools.lovable.app/?via=aiwebtools' },
   ];
 
   return (
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         {/* Call-to-action button */}
         <div className="fixed bottom-6 right-6 z-30">
           <a 
-            href="https://www.aiwebtools.ai" 
+            href="https://aiwebtools.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="main-cta inline-flex items-center gap-2 px-5 py-3 rounded-full shadow-neon"
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="pt-10 border-t border-cyber-neon-blue/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cyber-text-secondary text-sm">
-            &copy; 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-neon-blue transition-colors" title="AIWEBTOOLS.AI - AI Web Tools">AIWEBTOOLS.AI - AI WEB TOOLS LLC</a> All rights reserved.
+            &copy; 2025 <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-neon-blue transition-colors" title="AIWEBTOOLS.AI - AI Web Tools">AIWEBTOOLS.AI - AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           
           <div className="flex items-center gap-6">
