@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     { label: 'Try Movie Script Writer GPT', url: 'https://moviescriptwritergpt.lovable.app/?via=aiwebtools' },
     { label: 'FAQ', url: '#faq' },
     { label: 'Disclaimer', url: '#disclaimer' },
-    { label: 'More AI Tools', url: 'https://www.aiwebtools.ai' },
+    { label: 'More AI Tools', url: 'https://aiwebtools.lovable.app/?via=aiwebtools' },
   ];
 
   return (
