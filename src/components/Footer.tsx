@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         {/* Call-to-action button */}
         <div className="fixed bottom-6 right-6 z-30">
           <a 
-            href="https://www.aiwebtools.ai" 
+            href="https://aiwebtools.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="main-cta inline-flex items-center gap-2 px-5 py-3 rounded-full shadow-neon"
