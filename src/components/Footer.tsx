@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="pt-10 border-t border-cyber-neon-blue/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cyber-text-secondary text-sm">
-            &copy; 2025 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-neon-blue transition-colors" title="AIWEBTOOLS.AI - AI Web Tools">AIWEBTOOLS.AI - AI WEB TOOLS LLC</a> All rights reserved.
+            &copy; 2025 <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-neon-blue transition-colors" title="AIWEBTOOLS.AI - AI Web Tools">AIWEBTOOLS.AI - AI WEB TOOLS LLC</a> All rights reserved.
           </p>
           
           <div className="flex items-center gap-6">

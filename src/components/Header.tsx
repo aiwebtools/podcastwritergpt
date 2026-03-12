@@ -22,7 +22,7 @@ const Header: React.FC = () => {
   const headerLinks = [
     { label: 'FAQ', url: '#faq' },
     { label: 'Disclaimer', url: '#disclaimer' },
-    { label: 'More AI Tools', url: 'https://www.aiwebtools.ai' },
+    { label: 'More AI Tools', url: 'https://aiwebtools.lovable.app/?via=aiwebtools' },
   ];
 
   const toolLinks = [

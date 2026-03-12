@@ -54,7 +54,7 @@ const ConsentPopup: React.FC = () => {
         
         <div className="flex flex-col sm:flex-row gap-3 justify-end">
           <a 
-            href="https://aiwebtools.ai/terms-of-services" 
+            href="https://aiwebtools.lovable.app/disclaimers" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-sm text-cyber-neon-blue hover:underline"
